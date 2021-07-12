@@ -52,7 +52,7 @@ def _save_file(data, fpath):
 
     # Figure out what kind of file we're dealing with by name
     if fpath[-3:] == 'csv':
-        data.to_csv(fpath, index=False)
+        data.to_csv(fpath, index=True)
     elif fpath[-3:] == 'pkl':
         with open(fpath, 'wb') as f:
             pickle.dump(data, f)
